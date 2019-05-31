@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/tocoTheme/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2018 Universidad de Pinar del Rio
+  * Distributed under the GNU GPL v3.
+  * Translator: Rafael Medina Facal & D. Hereñú
+  *
+  * Localization strings
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.themes.tocoTheme.name">Tema de Proyecto Tocororo</message>
+	<message key="plugins.themes.tocoTheme.description">tocojs-theme Este es un tema basado en Bootstrap 4 para OJS 3 con un módulo JATS Parser incorporado.</message>
+	<message key="plugins.tocoTheme.search-text">Buscar dentro de la revista</message>
+	<message key="plugins.tocoTheme.search">Buscar</message>
+	<message key="plugins.tocoTheme.published">publicado</message>
+	<message key="plugins.tocoTheme.issue-read">Leer</message>
+	<message key="plugins.tocoTheme.home">Inicio</message>
+	<message key="plugins.tocoTheme.latest">Últimos artículos</message>
+	<message key="plugins.tocoTheme.enter-email">Introduce tu correo electrónico aquí</message>
+	<message key="plugins.tocoTheme.email">Correo electrónico del usuario registrado</message>
+	
+	<message key="plugins.tocoTheme.latest-issue">Último número</message>
+
+	<!-- Article page -->
+	<message key="plugins.tocoTheme.content">Contenido</message>
+	<message key="plugins.tocoTheme.article">Artículo</message>
+	<message key="plugins.tocoTheme.references">Referencias</message>
+	<message key="plugins.tocoTheme.download">Descargar</message>
+	<message key="plugins.tocoTheme.details">Detalles</message>
+	<message key="plugins.tocoTheme.copyright">Copyright</message>
+	<message key="plugins.tocoTheme.affiliations">Afiliaciones</message>
+	<message key="plugins.tocoTheme.top">Tope</message>
+	<message key="plugins.tocoTheme.statistics">Estadísticas</message>
+	<message key="plugins.tocoTheme.viewed">visto</message>
+	<message key="plugins.tocoTheme.times">veces</message>
+	<message key="plugins.tocoTheme.downloaded">descargado</message>
+	<message key="plugins.tocoTheme.authordetails">Datos del autor</message>
+	
+	<message key="plugins.tocoTheme.no-affiliation">Afiliación no declarada</message>
+
+	<message key="plugins.tocoTheme.latest.number">Cantidad de últimos artículos</message>
+	<message key="plugins.tocoTheme.latest.description">La cantidad de artículos a mostrar en la página de índice de la publicación</message>
+	<message key="plugins.tocoTheme.citation-style.type">Citation Style</message>
+	<message key="plugins.tocoTheme.citation-style.description">Citation Style para las referencias de JATS XML</message>
+	<message key="plugins.tocoTheme.citation-style.vancouver">Vancouver</message>
+	<message key="plugins.tocoTheme.citation-style.apa">APA</message>
+
+	<!-- Journal Index page -->
+	<message key="plugins.tocoTheme.issues.slider.title">últimos números</message>
+	<message key="plugins.tocoTheme.if-display.issue-slider">Cantidad de últimos números</message>
+	<message key="plugins.tocoTheme.if-display.issue-slider.description">La cantidad de últimos números a mostrar en el slider en la página de índice de la publicación; introduzca "0" para deshabilitar esta función</message>
+	<message key="plugins.tocoTheme.journal.summary">Descripción de la publicación</message>
+
+	<message key="plugins.tocoTheme.journal.summary.display">Resumen de la publicación</message>
+	<message key="plugins.tocoTheme.journal.summary.display.true">Deseo mostrar la descripción de la publicación en su página de índice</message>
+	<message key="plugins.tocoTheme.journal.summary.display.false">No deseo mostrar la descripción de la publicación en su página de índice"</message>
+
+	<message key="plugins.tocoTheme.option.typography.label">Tipografía</message>
+	<message key="plugins.tocoTheme.option.typography.description"></message>
+
+	<message key="plugins.tocoTheme.option.typography.myriad">Myriad</message>
+	<message key="plugins.tocoTheme.option.typography.notoSerif">Noto Serif</message>
+
+	<message key="plugins.tocoTheme.option.color.first.label">Color Primario</message>
+	<message key="plugins.tocoTheme.option.color.first.description">Color Primario</message>
+	
+	<message key="plugins.tocoTheme.option.color.second.label">Color Secundario</message>
+	<message key="plugins.tocoTheme.option.color.second.description">Color Secundario</message>
+	
+	<message key="plugins.tocoTheme.option.color.back.label">Color de Fondo</message>
+	<message key="plugins.tocoTheme.option.color.back.description">Colorde Fondo</message>
+
+	<message key="plugins.tocoTheme.option.color.text.label">Color de texto</message>
+	<message key="plugins.tocoTheme.option.color.text.description">Color de texto</message>
+
+	<message key="plugins.tocoTheme.menu.menu">Menú</message>
+    <message key="plugins.tocoTheme.menu.search">Buscar</message>
+    <message key="plugins.tocoTheme.menu.language">Lenguaje</message>
+    <message key="plugins.tocoTheme.menu.user">Perfil</message>
+	<message key="plugins.tocoTheme.printIssn">ISSN impreso</message>
+	<message key="plugins.tocoTheme.onlineIssn">ISSN en línea</message>
+	<message key="plugins.tocoTheme.technicalSupport">Soporte Técnico</message>
+	<message key="plugins.tocoTheme.authors">Autores</message>
+</locale>
