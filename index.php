@@ -12,4 +12,3 @@ require_once('TocoThemePlugin.inc.php');
 
 return new TocoThemePlugin();
 
-?>

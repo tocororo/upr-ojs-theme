@@ -15,7 +15,7 @@
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownUser">
                 {foreach key=field item=navigationMenuItemAssignment from=$navigationMenu->menuTree}
                     {if !$navigationMenuItemAssignment->navigationMenuItem->getIsDisplayed()}
-                        {php}continue;{/php}
+                        {continue}
                     {/if}
                     {if $navigationMenuItemAssignment->navigationMenuItem->getIsDisplayed()}
                         {if !empty($navigationMenuItemAssignment->children)}

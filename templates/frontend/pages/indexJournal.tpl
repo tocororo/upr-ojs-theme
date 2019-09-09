@@ -73,7 +73,7 @@
         </div>
         <div class="col-md-4">
             {if empty($isFullWidth)}
-                {call_hook|assign:"sidebarCode" name="Templates::Common::Sidebar"}
+                {capture assign="sidebarCode"}{call_hook name="Templates::Common::Sidebar"}{/capture}
                 {if $sidebarCode}
                     {* {if $latestIssues}
                         {include file="frontend/objects/issue_slider.tpl"}

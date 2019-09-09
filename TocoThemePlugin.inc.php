@@ -69,14 +69,43 @@ class TocoThemePlugin extends ThemePlugin
 		$this->addStyle('bootstrap', 'bootstrap/css/bootstrap.min.css');
 		$this->addStyle('tocostyles', 'less/index.less');
 		
-		$this->addScript('popper', 'bootstrap/js/popper.min.js');
-		$this->addScript('jquery', 'jquery/jquery.min.js');
+		//boostrap dependencies
+		$this->addJQueryPopper();
+		// $this->addScript('popper', 'bootstrap/js/popper.min.js');
+		// $this->addScript('jquery', 'jquery/jquery.min.js');
+
 		$this->addScript('bootstrap', 'bootstrap/js/bootstrap.bundle.min.js');
 		$this->addScript('bootstrap', 'bootstrap/js/bootstrap.min.js');
 		$this->addScript('fontawesome', 'js/fontawesome-all.min.js');
 		$this->addScript('article', 'js/article.js');
 		$this->addScript('search', 'js/search.js');
 
+	}
+	function addJQueryPopper(){
+		$request = Application::getRequest();
+		// $jquerymin = $request->getBaseUrl() . '/lib/pkp/lib/vendor/components/jquery/jquery.min.js';
+		// $this->addScript('jquery', $jquerymin);
+		
+
+
+		// Load jQuery from a CDN or, if CDNs are disabled, from a local copy.
+		$min = Config::getVar('general', 'enable_minified') ? '.min' : '';
+		if (Config::getVar('general', 'enable_cdn')) {
+			$jquery = '//ajax.googleapis.com/ajax/libs/jquery/' . CDN_JQUERY_VERSION . '/jquery' . $min . '.js';
+			$jqueryUI = '//ajax.googleapis.com/ajax/libs/jqueryui/' . CDN_JQUERY_UI_VERSION . '/jquery-ui' . $min . '.js';
+		} else {
+			// Use OJS's built-in jQuery files
+			$jquery = $request->getBaseUrl() . '/lib/pkp/lib/vendor/components/jquery/jquery' . $min . '.js';
+			$jqueryUI = $request->getBaseUrl() . '/lib/pkp/lib/vendor/components/jqueryui/jquery-ui' . $min . '.js';
+		}
+		// Use an empty `baseUrl` argument to prevent the theme from looking for
+		// the files within the theme directory
+		$this->addScript('jQuery', $jquery, array('baseUrl' => ''));
+		$this->addScript('jQueryUI', $jqueryUI, array('baseUrl' => ''));
+		$this->addScript('jQueryTagIt', $request->getBaseUrl() . '/lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js', array('baseUrl' => ''));
+		
+		$popper = $request->getBaseUrl() . '/plugins/themes/default/js/lib/popper/popper.js';
+		$this->addScript('popper', $popper, array('baseUrl' => ''));
 	}
 	function addOptions(){
 		
@@ -379,5 +408,3 @@ class TocoThemePlugin extends ThemePlugin
 	}
 
 }
-
-?>

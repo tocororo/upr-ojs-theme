@@ -21,7 +21,7 @@
             </li>
             {foreach key=field item=navigationMenuItemAssignment from=$navigationMenu->menuTree}
                 {if !$navigationMenuItemAssignment->navigationMenuItem->getIsDisplayed()}
-                    {php}continue;{/php}
+                    {continue}
                 {/if}
                 {if !empty($navigationMenuItemAssignment->children)}
                     <li class="{$liClass|escape} nav-item dropdown">
@@ -51,7 +51,7 @@
         <ul id="{$id|escape}" class="{$ulClass|escape}">
             {foreach key=field item=navigationMenuItemAssignment from=$navigationMenu->menuTree}
                 {if !$navigationMenuItemAssignment->navigationMenuItem->getIsDisplayed()}
-                    {php}continue;{/php}
+                    {continue}
                 {/if}
                 {if !empty($navigationMenuItemAssignment->children)}
                     <li class="{$liClass|escape} nav-item dropdown">
@@ -79,7 +79,7 @@
         <ul id="{$id|escape}" class="{$ulClass|escape} navbar-nav ml-md-auto d-none d-md-flex">
             {foreach key=field item=navigationMenuItemAssignment from=$navigationMenu->menuTree}
                 {if !$navigationMenuItemAssignment->navigationMenuItem->getIsDisplayed()}
-                    {php}continue;{/php}
+                    {continue}
                 {/if}
                 {if !empty($navigationMenuItemAssignment->children)}
                     <li class="{$liClass|escape} nav-item dropdown">
