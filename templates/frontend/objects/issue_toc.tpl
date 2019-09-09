@@ -6,7 +6,38 @@
  * Distributed under the GNU GPL v3.
  *
  *}
-
+<div class="container">
+                        
+    {if $issue->getLocalizedCoverImageUrl()}
+        <div class="text-center">
+            <h2 class="featurette-heading">
+                {translate key="journal.currentIssue"}
+            </h2>
+        </div>
+        <div class="homepage-image-wrapper col-md-12">
+                <img class="featurette-image img-fluid mx-auto"  src="{$issue->getLocalizedCoverImageUrl()}"{if $issue->getLocalizedCoverImageAltText() != ''} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
+        </div>    
+        <div class="text-center">
+            
+            <h2 class="featurette-heading">
+                {$issue->getIssueIdentification()|strip_unsafe_html}
+            </h2>
+        </div>
+    {else}
+        <h2 class="featurette-heading">
+            {translate key="journal.currentIssue"}
+            </h2>
+            <p class="lead">
+                {$issue->getIssueIdentification()|strip_unsafe_html}
+            </p>
+            {* Description *}
+            {if $issue->hasDescription()}
+                <p class="injournal-description">
+                    {$issue->getLocalizedDescription()|strip_unsafe_html}
+                </p>
+            {/if}
+    {/if}
+</div>
 <div class="obj_issue_toc">
     <div class="container">
 

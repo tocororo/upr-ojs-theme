@@ -31,47 +31,20 @@
         <hr class="featurette-divider">
         <div class="row">
         
-        <div class="col-md-8">
-            {if $issue}
-                <div class="row featurette">
+            {* <div class="col-md-8"> *}
+                {if $issue}
                     
-                    {if $issue->getLocalizedCoverImageUrl()}
-                        <div class="col-md-5">
-                                <img class="featurette-image img-fluid mx-auto"  src="{$issue->getLocalizedCoverImageUrl()}"{if $issue->getLocalizedCoverImageAltText() != ''} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
-                        </div>    
-                        <div class="col-md-7">
-                            <h2 class="featurette-heading">
-                            {translate key="journal.currentIssue"}
-                            </h2>
-                            <p class="lead">
-                                {$issue->getIssueIdentification()|strip_unsafe_html}
-                            </p>
-                        </div>
-                    {else}
-                        <h2 class="featurette-heading">
-                            {translate key="journal.currentIssue"}
-                            </h2>
-                            <p class="lead">
-                                {$issue->getIssueIdentification()|strip_unsafe_html}
-                            </p>
-                            {* Description *}
-                            {if $issue->hasDescription()}
-                                <p class="injournal-description">
-                                    {$issue->getLocalizedDescription()|strip_unsafe_html}
-                                </p>
-                            {/if}
-                    {/if}
-                </div>
-                {include file="frontend/objects/issue_toc.tpl"}
-                    
-                    <a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">
-                        {translate key="journal.viewAllIssues"}
-                    </a>
+                    {include file="frontend/objects/issue_toc.tpl"}
+                        
+                        <a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">
+                            {translate key="journal.viewAllIssues"}
+                        </a>
 
-            {/if}
-            {call_hook name="Templates::Index::journal"}
+                {/if}
+                {call_hook name="Templates::Index::journal"}
+            {* </div> *}
         </div>
-        <div class="col-md-4">
+        <div class="row">
             {if empty($isFullWidth)}
                 {capture assign="sidebarCode"}{call_hook name="Templates::Common::Sidebar"}{/capture}
                 {if $sidebarCode}
@@ -82,7 +55,6 @@
                 {/if}
             {/if}
         </div>
-    </div>
     </div>
 </div><!-- .page -->
 
