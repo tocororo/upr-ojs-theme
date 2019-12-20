@@ -7,7 +7,6 @@
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
-BLA BLA BLA BLA 
 {*include file="frontend/components/indexCarousel.tpl" *}
 
 <div class="page_index_journal container">
