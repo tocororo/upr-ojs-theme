@@ -10,6 +10,7 @@
 {/if}
 
 {foreach from=$announcements item=announcement}
+
     <div class="card">
         <{$heading} class="announcement-title card-header">
             <a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()}">

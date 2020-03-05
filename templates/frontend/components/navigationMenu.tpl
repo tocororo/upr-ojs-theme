@@ -100,7 +100,7 @@
                     <li class="{$liClass|escape} nav-item">
                         <a class="nav-link" href="{$navigationMenuItemAssignment->navigationMenuItem->getUrl()}">{$navigationMenuItemAssignment->navigationMenuItem->getLocalizedTitle()}</a>
                     </li>
-                {/if}
+                            {/if}
             {/foreach}
         </ul>
         *}

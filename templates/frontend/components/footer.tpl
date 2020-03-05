@@ -12,7 +12,10 @@
  *       sidebars have been configured for thesite.
  *}
 
-	
+
+{include file="frontend/components/sidebar.tpl"}
+
+
 <div id="pkp_content_footer" class="site-footer pkp_structure_footer_wrapper" role="contentinfo">
 
 	<div class="pkp_structure_footer d-flex flex-row flex-wrap justify-content-center container">

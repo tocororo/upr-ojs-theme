@@ -7,7 +7,7 @@
  *}
 
         {*<ul id="{$id|escape}" class="{$ulClass|escape} navbar-nav mr-auto pkp_navigation_primary">*}
-        <ul class="{$ulClass|escape} navbar-nav mr-auto pkp_navigation_primary">
+        <ul class="{$ulClass|escape} toco_navigation">
             <li class="nav-item dropdown"> 
             <a class="nav-link " href="#" id="navbarDropdownUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-lg fa-user" style="color: white"></i>
